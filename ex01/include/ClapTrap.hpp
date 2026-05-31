@@ -6,7 +6,7 @@
 /*   By: yuknakas <yuknakas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/14 16:01:11 by yuknakas          #+#    #+#             */
-/*   Updated: 2026/04/15 00:53:38 by yuknakas         ###   ########.fr       */
+/*   Updated: 2026/05/31 15:23:27 by yuknakas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,3 +45,8 @@ protected:
 	unsigned int	m_energy;
 	unsigned int	m_attack;
 };
+
+#define RED "\033[31m"
+#define GREEN "\033[32m"
+#define YELLOW "\033[33m"
+#define RESET "\033[0m"

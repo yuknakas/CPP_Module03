@@ -6,38 +6,43 @@
 /*   By: yuknakas <yuknakas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/14 16:48:44 by yuknakas          #+#    #+#             */
-/*   Updated: 2026/04/15 01:00:01 by yuknakas         ###   ########.fr       */
+/*   Updated: 2026/05/31 15:29:22 by yuknakas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/ClapTrap.hpp"
 #include "../include/ScavTrap.hpp"
+#include "../include/FragTrap.hpp"
 
 int	main( void )
 {
-	ClapTrap john("John");
-	ScavTrap bob("Bob");
+	ClapTrap	c_john("John");
+	ScavTrap	s_bob("Bob");
+	FragTrap	f_andy("Andy");
 	
-	john.attack("Bob");
-	john.takeDamage(2);
-	john.beRepaired(1);
-	john.takeDamage(2);
-	john.beRepaired(2);
-	john.attack("Ali");
-	john.takeDamage(5);
-	john.attack("Bob");
-	john.beRepaired(2);
-	john.attack("Bob");
-	john.takeDamage(10000);
-	john.attack("Joe");
-	john.beRepaired(10000);
+	c_john.attack("Bob");
+	c_john.takeDamage(2);
+	c_john.beRepaired(1);
+	c_john.takeDamage(2);
+	c_john.beRepaired(2);
+	c_john.attack("Ali");
+	c_john.takeDamage(5);
+	c_john.attack("Bob");
+	c_john.beRepaired(2);
+	c_john.attack("Bob");
+	c_john.takeDamage(10000);
+	c_john.attack("Joe");
+	c_john.beRepaired(10000);
 
-	bob.attack("Joe");
-	bob.guardGate();
-	bob.takeDamage(10);
-	bob.beRepaired(3);
-	bob.takeDamage(100000);
-	bob.attack("John");
+	s_bob.attack("Joe");
+	s_bob.guardGate();
+	s_bob.takeDamage(10);
+	s_bob.beRepaired(3);
+	s_bob.takeDamage(100000);
+	s_bob.attack("John");
+
+	f_andy.attack("John");
+	f_andy.highFiveGuys();
 
 	return (0);
 }
