@@ -6,7 +6,7 @@
 /*   By: yuknakas <yuknakas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/14 16:04:22 by yuknakas          #+#    #+#             */
-/*   Updated: 2026/05/31 15:22:44 by yuknakas         ###   ########.fr       */
+/*   Updated: 2026/07/05 16:43:42 by yuknakas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,24 @@ m_attack(0)
 	std::cout << GREEN << "Default Constructor Called for " << name << RESET << std::endl;
 }
 
+ClapTrap::ClapTrap( const ClapTrap &other )
+{
+	*this = other;
+}
+
 ClapTrap::~ClapTrap()
 {
 	std::cout << GREEN << "Destructor Called for " << this->m_name << RESET << std::endl;
 }
 
-std::string	ClapTrap::getName( void )
+ClapTrap	&ClapTrap::operator=( const ClapTrap &other )
+{
+	this->m_name = other.getName();
+	this->m_hp = other.getHP();
+	this->m_energy = other.getEnergy();
+}
+
+std::string	ClapTrap::getName( void ) const
 {
 	return (m_name);
 }
