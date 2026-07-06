@@ -6,7 +6,7 @@
 /*   By: yuknakas <yuknakas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/31 14:40:06 by yuknakas          #+#    #+#             */
-/*   Updated: 2026/05/31 15:26:58 by yuknakas         ###   ########.fr       */
+/*   Updated: 2026/07/06 18:41:51 by yuknakas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,26 @@ FragTrap::FragTrap( std::string name ) : ClapTrap( name )
 	<< RESET << std::endl;
 }
 
+FragTrap::FragTrap( const FragTrap &other ) : ClapTrap( other )
+{
+	*this = other;
+	std::cout << RED << "FragTrap Copy Constructor Called for "
+	<< this->getName() << RESET <<std::endl;
+}
+
 FragTrap::~FragTrap()
 {
 	std::cout << RED << "FragTrap Destructor Called for " << this->m_name
 	<< RESET << std::endl;
+}
+
+FragTrap	&FragTrap::operator=( const FragTrap &other )
+{
+	if (this != &other)
+		ClapTrap::operator=( other );
+	std::cout << RED << "FragTrap Copy Assignment Operator Called for "
+	<< this->getName() << RESET << std::endl;
+	return (*this);
 }
 
 void	FragTrap::attack( const std::string &target )
@@ -49,6 +65,12 @@ void	FragTrap::attack( const std::string &target )
 
 void	FragTrap::highFiveGuys( void )
 {
+	if (m_hp < 1)
+	{
+		std::cout << RED << m_name << " is DEAD!"
+		<< RESET << std::endl;
+		return ;
+	}
 	std::cout << RED << "FragTrap " << m_name << " says High Five Guys!!"
 	<< RESET << std::endl;
 }

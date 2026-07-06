@@ -6,7 +6,7 @@
 /*   By: yuknakas <yuknakas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/14 16:01:11 by yuknakas          #+#    #+#             */
-/*   Updated: 2026/05/31 14:49:23 by yuknakas         ###   ########.fr       */
+/*   Updated: 2026/07/06 17:22:25 by yuknakas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,14 +25,19 @@ class ClapTrap
 public:
 	// constructor
 	ClapTrap( std::string name );
+	// copy constructor
+	ClapTrap( const ClapTrap &other );
 	// destructor
-	virtual ~ClapTrap();
+	~ClapTrap();
+
+	// copy assignment
+	ClapTrap	&operator=( const ClapTrap &other );
 
 	// getter
-	std::string		getName( void );
-	unsigned int	getHP( void );
-	unsigned int	getEnergy( void );
-	unsigned int	getAttack( void );
+	std::string		getName( void ) const;
+	unsigned int	getHP( void ) const;
+	unsigned int	getEnergy( void ) const;
+	unsigned int	getAttack( void ) const;
 
 	// memeber functions
 	void	attack( const std::string &target );
