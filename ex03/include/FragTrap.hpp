@@ -6,7 +6,7 @@
 /*   By: yuknakas <yuknakas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/31 14:33:20 by yuknakas          #+#    #+#             */
-/*   Updated: 2026/07/06 18:07:01 by yuknakas         ###   ########.fr       */
+/*   Updated: 2026/07/07 14:51:47 by yuknakas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ public:
 	~FragTrap();
 
 	// Copy Operator
+	FragTrap	&operator=( const FragTrap &other );
 	
 	// member functions
 	void	attack( const std::string &target );

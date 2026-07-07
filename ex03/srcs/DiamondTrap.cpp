@@ -6,7 +6,7 @@
 /*   By: yuknakas <yuknakas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/31 16:39:37 by yuknakas          #+#    #+#             */
-/*   Updated: 2026/07/06 19:10:47 by yuknakas         ###   ########.fr       */
+/*   Updated: 2026/07/07 14:52:06 by yuknakas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,7 @@ DiamondTrap	&DiamondTrap::operator=( const DiamondTrap &other )
 		this->m_name = other.getName();
 	}
 	std::cout << "DiamondTrap Copy Assignment Operator Called" << std::endl;
+	return (*this);
 }
 
 void	DiamondTrap::attack( const std::string &name )
