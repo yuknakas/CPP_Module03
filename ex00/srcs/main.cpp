@@ -6,7 +6,7 @@
 /*   By: yuknakas <yuknakas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/14 16:48:44 by yuknakas          #+#    #+#             */
-/*   Updated: 2026/07/07 17:17:35 by yuknakas         ###   ########.fr       */
+/*   Updated: 2026/07/07 19:05:28 by yuknakas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ int	main( void )
 
 	std::cout << std::endl;
 	std::cout << "================= OCF ================" << std::endl;
+	ClapTrap nobody;
 	ClapTrap c_adam("adam");
 	ClapTrap c_adam2(c_adam);
 	

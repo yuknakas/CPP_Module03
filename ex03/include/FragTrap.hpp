@@ -6,7 +6,7 @@
 /*   By: yuknakas <yuknakas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/31 14:33:20 by yuknakas          #+#    #+#             */
-/*   Updated: 2026/07/07 14:51:47 by yuknakas         ###   ########.fr       */
+/*   Updated: 2026/07/07 19:14:56 by yuknakas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,11 @@ class FragTrap : virtual public ClapTrap
 {
 public:
 	// constructor
+	FragTrap( void );
 	FragTrap( std::string name );
-	// copy constructor
 	FragTrap( const FragTrap &other );
 	// destructor
-	~FragTrap();
+	virtual ~FragTrap();
 
 	// Copy Operator
 	FragTrap	&operator=( const FragTrap &other );

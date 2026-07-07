@@ -6,11 +6,20 @@
 /*   By: yuknakas <yuknakas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/14 16:04:22 by yuknakas          #+#    #+#             */
-/*   Updated: 2026/07/07 17:24:29 by yuknakas         ###   ########.fr       */
+/*   Updated: 2026/07/07 19:08:43 by yuknakas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/ClapTrap.hpp"
+
+ClapTrap::ClapTrap( void )
+:m_name( "nobody" ),
+m_hp(10),
+m_energy(10),
+m_attack(0)
+{
+	std::cout << GREEN << "Default ClapTrap Constructor Called (nobody)" << RESET << std::endl;
+}
 
 ClapTrap::ClapTrap( std::string name )
 :m_name(name),
@@ -18,7 +27,7 @@ m_hp(10),
 m_energy(10),
 m_attack(0)
 {
-	std::cout << GREEN << "Default Constructor Called for " << name << RESET << std::endl;
+	std::cout << GREEN << "ClapTrap Constructor Called for " << name << RESET << std::endl;
 }
 
 ClapTrap::ClapTrap( const ClapTrap &other )
@@ -124,6 +133,7 @@ void	ClapTrap::beRepaired( unsigned int amount )
 	}
 	std::cout << GREEN << "ClapTrap " << m_name << " healed " << amount
 	<< " amount of HP!" << RESET << std::endl;
+	m_energy--;
 	if (m_hp > UINT_MAX - amount)
 		m_hp = UINT_MAX;
 	else

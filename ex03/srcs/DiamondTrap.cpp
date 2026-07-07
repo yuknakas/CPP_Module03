@@ -6,11 +6,21 @@
 /*   By: yuknakas <yuknakas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/31 16:39:37 by yuknakas          #+#    #+#             */
-/*   Updated: 2026/07/07 17:27:54 by yuknakas         ###   ########.fr       */
+/*   Updated: 2026/07/07 19:18:47 by yuknakas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/DiamondTrap.hpp"
+
+DiamondTrap::DiamondTrap( void )
+: ClapTrap( "nobody_clap_name" ), ScavTrap(), FragTrap()
+{
+	this->m_name = "nobody";
+	this->m_hp = 100;
+	this->m_energy = 50;
+	this->m_attack = 30;
+	std::cout << "Default DiamondTrap Constructor Called (nobody)" << std::endl;
+}
 
 DiamondTrap::DiamondTrap( std::string name )
 : ClapTrap( name + "_clap_name" ), ScavTrap( name ), FragTrap( name )
@@ -19,7 +29,7 @@ DiamondTrap::DiamondTrap( std::string name )
 	this->m_hp = 100;
 	this->m_energy = 50;
 	this->m_attack = 30;
-	std::cout << "Default DiamondTrap Constructor Called for " << name << std::endl;
+	std::cout << "DiamondTrap Constructor Called for " << name << std::endl;
 }
 
 DiamondTrap::DiamondTrap( const DiamondTrap &other )

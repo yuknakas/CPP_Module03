@@ -6,18 +6,26 @@
 /*   By: yuknakas <yuknakas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/27 03:09:23 by yuknakas          #+#    #+#             */
-/*   Updated: 2026/07/07 17:28:13 by yuknakas         ###   ########.fr       */
+/*   Updated: 2026/07/07 19:07:57 by yuknakas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/ScavTrap.hpp"
+
+ScavTrap::ScavTrap( void ) : ClapTrap()
+{
+	this->m_hp = 100;
+	this->m_energy = 50;
+	this->m_attack = 20;
+	std::cout << YELLOW << "Default ScavTrap Constructor Called (nobody)" << RESET << std::endl;
+}
 
 ScavTrap::ScavTrap( std::string name ) : ClapTrap( name )
 {
 	this->m_hp = 100;
 	this->m_energy = 50;
 	this->m_attack = 20;
-	std::cout << YELLOW << "Default ScavTrap Constructor Called for " << name << RESET << std::endl;
+	std::cout << YELLOW << "ScavTrap Constructor Called for " << name << RESET << std::endl;
 }
 
 ScavTrap::ScavTrap( const ScavTrap &other ) : ClapTrap( other )

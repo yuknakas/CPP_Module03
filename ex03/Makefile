@@ -6,12 +6,12 @@
 #    By: yuknakas <yuknakas@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/05/31 15:38:10 by yuknakas          #+#    #+#              #
-#    Updated: 2026/07/07 17:12:57 by yuknakas         ###   ########.fr        #
+#    Updated: 2026/07/07 19:16:39 by yuknakas         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	=	traps
-CPP		=	c++ -Wall -Wextra -Werror -Wshadow -Wno-shadow -std=c++98
+CPP		=	c++ -Wall -Wextra -Werror -Wshadow -std=c++98 -pedantic
 
 SRCS	=	srcs/ClapTrap.cpp srcs/FragTrap.cpp srcs/ScavTrap.cpp \
 			srcs/DiamondTrap.cpp srcs/main.cpp
