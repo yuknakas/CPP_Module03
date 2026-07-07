@@ -6,7 +6,7 @@
 /*   By: yuknakas <yuknakas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/14 16:01:11 by yuknakas          #+#    #+#             */
-/*   Updated: 2026/07/07 17:14:15 by yuknakas         ###   ########.fr       */
+/*   Updated: 2026/07/07 19:15:53 by yuknakas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,11 @@ class ClapTrap
 {
 public:
 	// constructor
+	ClapTrap( void );
 	ClapTrap( std::string name );
-	// copy constructor
 	ClapTrap( const ClapTrap &other );
 	// destructor
-	~ClapTrap();
+	virtual ~ClapTrap();
 
 	// copy assignment
 	ClapTrap	&operator=( const ClapTrap &other );
@@ -51,7 +51,10 @@ protected:
 	unsigned int	m_attack;
 };
 
+#define RESET "\033[0m"
 #define RED "\033[31m"
 #define GREEN "\033[32m"
 #define YELLOW "\033[33m"
-#define RESET "\033[0m"
+#define BLUE "\033[34m"
+#define MAGENTA "\033[35m"
+#define CYAN "\033[36m"

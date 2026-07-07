@@ -6,7 +6,7 @@
 /*   By: yuknakas <yuknakas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/27 03:09:22 by yuknakas          #+#    #+#             */
-/*   Updated: 2026/07/07 17:14:27 by yuknakas         ###   ########.fr       */
+/*   Updated: 2026/07/07 19:15:57 by yuknakas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,11 @@ class ScavTrap : public ClapTrap
 {
 public:
 	// constructor
+	ScavTrap( void );
 	ScavTrap( std::string name );
-	// copy constructor
 	ScavTrap( const ScavTrap &other );
 	// destructor
-	~ScavTrap();
+	virtual ~ScavTrap();
 	
 	// operator = override
 	ScavTrap &operator=( const ScavTrap &other );

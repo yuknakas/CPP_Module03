@@ -6,7 +6,7 @@
 /*   By: yuknakas <yuknakas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/14 16:01:11 by yuknakas          #+#    #+#             */
-/*   Updated: 2026/07/07 17:10:27 by yuknakas         ###   ########.fr       */
+/*   Updated: 2026/07/07 19:16:05 by yuknakas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,11 @@ class ClapTrap
 {
 public:
 	// constructor
+	ClapTrap( void );
 	ClapTrap( std::string name );
-	// copy constructor
 	ClapTrap( const ClapTrap &other );
 	// destructor
-	~ClapTrap();
+	virtual ~ClapTrap();
 
 	// copy assignment
 	ClapTrap	&operator=( const ClapTrap &other );

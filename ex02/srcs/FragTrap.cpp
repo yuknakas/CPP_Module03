@@ -6,18 +6,27 @@
 /*   By: yuknakas <yuknakas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/31 14:40:06 by yuknakas          #+#    #+#             */
-/*   Updated: 2026/07/07 17:25:16 by yuknakas         ###   ########.fr       */
+/*   Updated: 2026/07/07 19:12:06 by yuknakas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/FragTrap.hpp"
+
+FragTrap::FragTrap( void ) : ClapTrap()
+{
+	this->m_hp = 100;
+	this->m_energy = 100;
+	this->m_attack = 30;
+	std::cout << RED << "Default FragTrap Constructor Called (nobody)"
+	<< RESET << std::endl;
+}
 
 FragTrap::FragTrap( std::string name ) : ClapTrap( name )
 {
 	this->m_hp = 100;
 	this->m_energy = 100;
 	this->m_attack = 30;
-	std::cout << RED << "Default FragTrap Constructor Called for " << name
+	std::cout << RED << "FragTrap Constructor Called for " << name
 	<< RESET << std::endl;
 }
 
