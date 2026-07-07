@@ -6,13 +6,13 @@
 #    By: yuknakas <yuknakas@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/05/31 14:50:28 by yuknakas          #+#    #+#              #
-#    Updated: 2026/05/31 14:59:36 by yuknakas         ###   ########.fr        #
+#    Updated: 2026/07/05 16:40:33 by yuknakas         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	=	traps
 
-CPP		=	c++ -Wall -Wextra -Werror -std=c++98
+CPP		=	c++ -Wall -Wextra -Werror -std=c++98 -pedantic
 SRCS	=	srcs/ClapTrap.cpp srcs/main.cpp
 OBJS	=	$(SRCS:.cpp=.o)
 

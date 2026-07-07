@@ -6,7 +6,7 @@
 /*   By: yuknakas <yuknakas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/14 16:01:11 by yuknakas          #+#    #+#             */
-/*   Updated: 2026/01/14 16:22:41 by yuknakas         ###   ########.fr       */
+/*   Updated: 2026/07/06 17:31:38 by yuknakas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,14 +25,19 @@ class ClapTrap
 public:
 	// constructor
 	ClapTrap( std::string name );
+	// copy constructor
+	ClapTrap( const ClapTrap &other );
 	// destructor
 	~ClapTrap();
 
+	// copy assignment
+	ClapTrap	&operator=( const ClapTrap &other );
+
 	// getter
-	std::string		getName( void );
-	unsigned int	getHP( void );
-	unsigned int	getEnergy( void );
-	unsigned int	getAttack( void );
+	std::string		getName( void ) const;
+	unsigned int	getHP( void ) const;
+	unsigned int	getEnergy( void ) const;
+	unsigned int	getAttack( void ) const;
 
 	// memeber functions
 	void	attack( const std::string &target );
@@ -46,7 +51,10 @@ private:
 	unsigned int	m_attack;
 };
 
+#define RESET "\033[0m"
 #define RED "\033[31m"
 #define GREEN "\033[32m"
 #define YELLOW "\033[33m"
-#define RESET "\033[0m"
+#define BLUE "\033[34m"
+#define MAGENTA "\033[35m"
+#define CYAN "\033[36m"

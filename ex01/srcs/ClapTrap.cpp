@@ -6,7 +6,7 @@
 /*   By: yuknakas <yuknakas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/14 16:04:22 by yuknakas          #+#    #+#             */
-/*   Updated: 2026/05/31 15:22:53 by yuknakas         ###   ########.fr       */
+/*   Updated: 2026/07/06 17:41:19 by yuknakas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,31 +21,50 @@ m_attack(0)
 	std::cout << GREEN << "Default Constructor Called for " << name << RESET << std::endl;
 }
 
+ClapTrap::ClapTrap( const ClapTrap &other )
+{
+	*this = other;
+	std::cout << GREEN << "ClapTrap Copy Constructor Called for "
+	<< this->getName() << RESET <<std::endl;
+}
+
 ClapTrap::~ClapTrap()
 {
 	std::cout << GREEN << "Destructor Called for " << this->m_name << RESET << std::endl;
 }
 
-std::string	ClapTrap::getName( void )
+ClapTrap	&ClapTrap::operator=( const ClapTrap &other )
+{
+	if (this != &other)
+	{
+		this->m_name = other.getName();
+		this->m_hp = other.getHP();
+		this->m_energy = other.getEnergy();
+		std::cout << GREEN << "ClapTrap Copy Assignment Operator Called for "
+		<< this->getName() << RESET << std::endl;
+	}
+	return (*this);
+}
+
+std::string	ClapTrap::getName( void ) const
 {
 	return (m_name);
 }
 
-unsigned int	ClapTrap::getHP( void )
+unsigned int	ClapTrap::getHP( void ) const
 {
 	return (m_hp);
 }
 
-unsigned int	ClapTrap::getEnergy( void )
+unsigned int	ClapTrap::getEnergy( void ) const
 {
 	return (m_energy);
 }
 
-unsigned int	ClapTrap::getAttack( void )
+unsigned int	ClapTrap::getAttack( void ) const
 {
 	return (m_attack);
 }
-
 void	ClapTrap::attack( const std::string &target )
 {
 	if (m_hp < 1)
