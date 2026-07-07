@@ -6,7 +6,7 @@
 /*   By: yuknakas <yuknakas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/27 03:09:23 by yuknakas          #+#    #+#             */
-/*   Updated: 2026/07/06 18:41:24 by yuknakas         ###   ########.fr       */
+/*   Updated: 2026/07/07 17:25:32 by yuknakas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@ ScavTrap::ScavTrap( std::string name ) : ClapTrap( name )
 
 ScavTrap::ScavTrap( const ScavTrap &other ) : ClapTrap( other )
 {
-	*this = other;
 	std::cout << YELLOW << "ScavTrap Copy Constructor Called for "
-	<< this->getName() << RESET <<std::endl;
+	<< other.getName() << RESET <<std::endl;
+	*this = other;
 }
 
 ScavTrap::~ScavTrap()

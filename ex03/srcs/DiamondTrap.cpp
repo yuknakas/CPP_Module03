@@ -6,7 +6,7 @@
 /*   By: yuknakas <yuknakas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/31 16:39:37 by yuknakas          #+#    #+#             */
-/*   Updated: 2026/07/07 14:52:06 by yuknakas         ###   ########.fr       */
+/*   Updated: 2026/07/07 17:27:54 by yuknakas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ DiamondTrap::DiamondTrap( std::string name )
 DiamondTrap::DiamondTrap( const DiamondTrap &other )
 : ClapTrap( other ), ScavTrap( other ), FragTrap( other )
 {
+	std::cout << "DiamondTrap copy operator called for" << other.getName() << std::endl;
 	*this = other;
-	std::cout << "DiamondTrap copy operator called" << std::endl;
 }
 
 DiamondTrap::~DiamondTrap()

@@ -6,7 +6,7 @@
 /*   By: yuknakas <yuknakas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/14 16:04:22 by yuknakas          #+#    #+#             */
-/*   Updated: 2026/07/06 17:40:27 by yuknakas         ###   ########.fr       */
+/*   Updated: 2026/07/07 17:24:29 by yuknakas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,9 @@ m_attack(0)
 
 ClapTrap::ClapTrap( const ClapTrap &other )
 {
-	*this = other;
 	std::cout << GREEN << "Copy Constructor Called for "
-	<< this->getName() << RESET <<std::endl;
+	<< other.getName() << RESET <<std::endl;
+	*this = other;
 }
 
 ClapTrap::~ClapTrap()
